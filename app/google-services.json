@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "838713532254",
+    "project_id": "production-engineering-d815d",
+    "storage_bucket": "production-engineering-d815d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838713532254:android:d638b546adf9a1b62139cf",
+        "android_client_info": {
+          "package_name": "com.suez.uni.petroleum.engineering.production"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838713532254-bgeh8vh4ac2d5mp9naq8lsmscs5ul3dm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.suez.uni.petroleum.engineering.production",
+            "certificate_hash": "e07794ed47b5457504631d89936fc7cb76c99b38"
+          }
+        },
+        {
+          "client_id": "838713532254-bpier3p1t2aohcse01930q1stpbjivdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3V47GVGbmFCSm-lvpdvi1rRTtt7nKVxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838713532254-bpier3p1t2aohcse01930q1stpbjivdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
