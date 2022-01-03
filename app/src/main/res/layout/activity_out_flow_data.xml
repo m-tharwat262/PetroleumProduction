@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:context=".activities.LoginActivity">
+
+
+
+        <TextView
+            android:id="@+id/activity_out_flow_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/out_flow_input_data"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_color"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/activity_out_flow_fields_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_out_flow_header"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/add_task_label"
+                    android:text="@string/depth"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/cardView_item"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="true"
+                        app:cardBackgroundColor="@color/white">
+
+                        <EditText
+                            android:id="@+id/activity_out_flow_depth_field"
+                            style="@style/login_edit_text"
+                            android:gravity="center"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:inputType="numberDecimal"
+                            android:hint="@string/number_hint"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/ft"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/add_task_label"
+                    android:text="@string/well_head_pressure"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/cardView_item"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="true"
+                        app:cardBackgroundColor="@color/white">
+
+                        <EditText
+                            android:id="@+id/activity_out_flow_well_head_pressure_field"
+                            style="@style/login_edit_text"
+                            android:gravity="center"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:inputType="numberDecimal"
+                            android:hint="@string/number_hint"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/psig"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/add_task_label"
+                    android:text="@string/gas_liquid_ratio"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/cardView_item"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="true"
+                        app:cardBackgroundColor="@color/white">
+
+                        <EditText
+                            android:id="@+id/activity_out_flow_gas_liquid_ratio_field"
+                            style="@style/login_edit_text"
+                            android:gravity="center"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:inputType="numberDecimal"
+                            android:hint="@string/number_hint"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/scf_stb"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/add_task_label"
+                    android:text="@string/american_petroleum_institute"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/cardView_item"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="true"
+                        app:cardBackgroundColor="@color/white">
+
+                        <EditText
+                            android:id="@+id/activity_out_flow_american_petroleum_institute_field"
+                            style="@style/login_edit_text"
+                            android:gravity="center"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:inputType="numberDecimal"
+                            android:text="35"
+                            android:hint="@string/number_hint"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/none"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/add_task_label"
+                    android:text="@string/gas_specific_gravity"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/cardView_item"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="true"
+                        app:cardBackgroundColor="@color/white">
+
+                        <EditText
+                            android:id="@+id/activity_out_flow_gas_specific_gravity_field"
+                            style="@style/login_edit_text"
+                            android:gravity="center"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:inputType="numberDecimal"
+                            android:text="0.65"
+                            android:hint="@string/number_hint"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/none"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/add_task_label"
+                    android:text="@string/water_fraction"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/cardView_item"
+                        app:cardCornerRadius="25dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="true"
+                        app:cardBackgroundColor="@color/white">
+
+                        <EditText
+                            android:id="@+id/activity_out_flow_water_fraction_field"
+                            style="@style/login_edit_text"
+                            android:gravity="center"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:inputType="numberDecimal"
+                            android:text="50"
+                            android:hint="@string/number_hint"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/percentage"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"
+                    android:alpha="0.5"/>
+
+
+                <TextView
+                    style="@style/add_task_label"
+                    android:layout_width="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/tubing_size_parameters"/>
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"
+                    android:alpha="0.5"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/activity_out_flow_diameters_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activity_out_flow_first_diameter_title"
+                        style="@style/add_task_label"
+                        android:text="@string/diameter"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/cardView_item"
+                            app:cardCornerRadius="25dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true"
+                            app:cardBackgroundColor="@color/white">
+
+                            <EditText
+                                android:id="@+id/activity_out_flow_first_diameter_field"
+                                style="@style/login_edit_text"
+                                android:gravity="center"
+                                android:textColorHint="@android:color/darker_gray"
+                                android:inputType="numberDecimal"
+                                android:text="1.995"
+                                android:hint="@string/number_hint"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/primary_color"
+                            android:text="@string/in"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        style="@style/add_task_label"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#838383"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/have_another_diameter"/>
+
+
+                    <TextView
+                        android:id="@+id/activity_out_flow_add_diameter_button"
+                        style="@style/add_task_label"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/primary_color"
+                        android:background="@drawable/text_button"
+                        android:text="@string/add"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/activity_out_flow_fields_container"
+            android:layout_marginTop="24dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:paddingEnd="24dp"
+                android:paddingStart="0dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+
+
+                <TextView
+                    android:id="@+id/activity_out_flow_back_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textAllCaps="true"
+                    android:text="@string/back"
+                    android:background="@drawable/final_secondary_button"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="24dp"
+                android:paddingEnd="0dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+
+
+                <TextView
+                    android:id="@+id/activity_out_flow_next_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textAllCaps="true"
+                    android:text="@string/next"
+                    android:background="@drawable/final_secondary_button"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
+

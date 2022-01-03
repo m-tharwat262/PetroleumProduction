@@ -45,7 +45,7 @@ public class SplashActivity extends AppCompatActivity {
         editor = pref.edit();
 
 
-        LinearLayout doctorLayout = findViewById(R.id.activity_splash_screen_doctor_layout);
+        TextView doctorLayout = findViewById(R.id.activity_splash_screen_doctor_text_view);
         LinearLayout studentLayout = findViewById(R.id.activity_splash_screen_student_layout);
 
 
@@ -81,14 +81,6 @@ public class SplashActivity extends AppCompatActivity {
 
     }
 
-
-    private Bitmap getBitmapFromAsset(String strName) throws IOException
-    {
-        AssetManager assetManager = getAssets();
-        InputStream istr = assetManager.open(strName);
-        Bitmap bitmap = BitmapFactory.decodeStream(istr);
-        return bitmap;
-    }
 
 
 }

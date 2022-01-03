@@ -52,6 +52,11 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth;
     private DatabaseReference mDatabaseReference;
 
+
+
+
+
+
     private String mEmailAddress = "";
     private String mPassword = "";
 

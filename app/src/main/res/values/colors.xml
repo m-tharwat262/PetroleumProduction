@@ -7,16 +7,27 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">@android:color/holo_red_dark</color>
 
 
     <color name="primary_color">#004477</color>
     <color name="secondary_color">#003963</color>
-    <color name="ripple_primary_button">#AD5C5B5B</color>
+    <color name="ripple_primary_button">#80717070</color>
     <color name="hint_text">#9901538E</color>
     <color name="white_frame">#F9F9F9</color>
 
     <color name="gradient">#C5C5CB</color>
 
     <color name="input_field">#E7E7ED</color>
+
+
+    // for table
+    <color name="table_black">#1b1e24</color>
+    <color name="table_light">#3e94ec</color>
+    <color name="table_dark">#3885d4</color>
+    <color name="table_line">#3f4853</color>
+    <color name="table_text_name">#dcdcdc</color>
+    <color name="table_text_header">#a2a2a4</color>
+    <color name="table_text_item">#233b55</color>
 
 </resources>

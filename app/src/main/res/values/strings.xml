@@ -56,7 +56,6 @@
     <string name="send_reset_password_link">We sent a Link to you email address, please check it out.</string>
 
 
-
     <string name="faculty">Faculty of Petroleum &amp; Mining Engineering</string>
     <string name="suez_university">Suez University</string>
     <string name="department">Exploration &amp; Production Engineering</string>
@@ -70,6 +69,65 @@
     <string name="tharwat_id">17136</string>
     <string name="naeem_id">17138</string>
     <string name="peter_id">17114</string>
+    <string name="ipr">IPR</string>
+    <string name="ipr_title">IPR Generalization</string>
+    <string name="full_well_design">Well Design</string>
+    <string name="history">History</string>
+    <string name="how_to_use">How to Use</string>
+    <string name="average_reservoir_pressure">Average Reservoir Pressure (Pres)</string>
+    <string name="psig">Psig</string>
+    <string name="number_hint">00000</string>
+    <string name="next">next</string>
+    <string name="skin_effect_existing">Skin Effect Exists</string>
+    <string name="bubble_point_pressure">Bubble Point Pressure (Pb)</string>
+    <string name="test_point">Test Point Data</string>
+    <string name="test_point_pressure">Pressure (Pwf)</string>
+    <string name="test_point_flow_rate">Flow Rate (Ql)</string>
+    <string name="flow_efficiency">Flow Efficiency (F.E)</string>
+    <string name="flow_efficiency_with_number">Flow Efficiency (F.E %1$d)</string>
+    <string name="stb_day">STB/Day</string>
+    <string name="none">ـــــــــ</string>
+    <string name="do_not_have_fe">Don\'t have F.E ?</string>
+    <string name="generate"><u>Calculate it</u></string>
+    <string name="add"><u>Add</u></string>
+    <string name="have_another_fe_value">Have another F.E values ?</string>
+    <string name="back">back</string>
+    <string name="calculate_fe">Calculate F.E</string>
+    <string name="calculate">calculate</string>
+    <string name="skin_factor">Skin Factor (S)</string>
+    <string name="another_test_point">Another Test Point</string>
+    <string name="pressure">pressure (Pwf2)</string>
+    <string name="flow_rate">flow rate (Ql2)</string>
+    <string name="table_name">Tabel Name</string>
+    <string name="pwf">Pwf (psig)</string>
+    <string name="ql">Ql (STB/Day)</string>
+    <string name="x_axis_title">Pressure (psig)</string>
+    <string name="y_axis_title">Flow Rate (STB/Day)</string>
+    <string name="fe_with_number">F.E %1$d</string>
+    <string name="table_note">NOTE: Ql is an estimated value of Pwf = 0 that can\'t be reached in reality</string>
+    <string name="ipr_graph">Inflow Performance Curve</string>
+    <string name="out_flow_input_data">Out Flow Input Data</string>
+    <string name="depth">Depth (d)</string>
+    <string name="ft">Ft</string>
+    <string name="well_head_pressure">Well Head Pressure (Pwh)</string>
+    <string name="gas_liquid_ratio">Gas Liquid Ratio (GLR)</string>
+    <string name="scf_stb">scf/STB</string>
+    <string name="american_petroleum_institute">American Petroleum Institute (API)</string>
+    <string name="gas_specific_gravity">Gas Specific Gravity (SG)</string>
+    <string name="water_fraction">Water Fraction (Fw)</string>
+    <string name="percentage">%</string>
+    <string name="tubing_size_parameters">Tubing Size Values</string>
+    <string name="diameter">Diameter (d)</string>
+    <string name="diameter_with_number">Diameter (d %1$d)</string>
+    <string name="in">in</string>
+    <string name="have_another_diameter">Have another diameter ?</string>
+
+
+    <string name="d_with_number">d %1$d</string>
+    <string name="out_flow_table">Outflow Table</string>
+    <string name="wll_design_graph">Inflow &amp; Outflow Performance Curves</string>
+
+
 
 
 </resources>

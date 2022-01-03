@@ -242,7 +242,7 @@ public class SignUpActivity extends AppCompatActivity {
 
 
                 // create a User object contain the user data.
-                UserObject userObject = new UserObject(mName, mEmailAddress);
+                UserObject userObject = new UserObject(mName, mEmailAddress, mPassword);
 
                 // insert the user object above to the firebase.
                 // and set the preference to store that data.

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_graph_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.GraphActivity">
+
+
+    <TextView
+        android:id="@+id/activity_graph_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textColor="@color/primary_color"
+        android:layout_marginBottom="24dp"
+        android:text="@string/ipr_graph"/>
+
+<!--    <com.jjoe64.graphview.GraphView-->
+<!--        android:id="@+id/activity_graph_graph_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_below="@id/activity_graph_title"-->
+<!--        android:layout_height="match_parent"/>-->
+
+</LinearLayout>

@@ -6,11 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -21,6 +25,33 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.suez.uni.petroleum.engineering.production.R;
+import com.suez.uni.petroleum.engineering.production.calculator.Ipr;
+
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellValue;
+import org.apache.poi.ss.usermodel.FormulaEvaluator;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.util.CellReference;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Iterator;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -35,9 +66,11 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth;
 
 
-    private LinearLayout mProfileButton;
+    private LinearLayout mIprButton;
     private LinearLayout mLogoutButton;
-
+    private LinearLayout mHowToUseButton;
+    private LinearLayout mHistoryButton;
+    private LinearLayout mWellDesignButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,52 +84,243 @@ public class MainActivity extends AppCompatActivity {
         editor = pref.edit();
 
 
-        mProfileButton = findViewById(R.id.activity_main_profile_button);
+        mIprButton = findViewById(R.id.activity_main_ipr_button);
         mLogoutButton= findViewById(R.id.activity_main_logout_button);
+        mWellDesignButton = findViewById(R.id.activity_main_well_design_button);
+        mHowToUseButton = findViewById(R.id.activity_main_how_to_use_button);
+        mHistoryButton = findViewById(R.id.activity_main_history_button);
 
 
-        TextView welcome = findViewById(R.id.welcome);
+
 
 
         Animation animationFromLeftToRight = AnimationUtils.loadAnimation(this, R.anim.animation_from_buttom_to_top);
 
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
 
-                boolean isFirstLogIn = pref.getBoolean("first_login_in", true);
-                if (!isFirstLogIn) {
-                    welcome.setText("ويلكم من جديد يا خول");
-                }
-
-                welcome.setVisibility(View.VISIBLE);
-                welcome.setAnimation(animationFromLeftToRight);
-
-                editor.putBoolean("first_login_in", false);
-                editor.apply();
-
-            }
-        }, 1000);
 
         setClickingOnLogout();
-        setClickingOnProfileButton();
+        setClickingOnIprButton();
+        setClickingOnWellDesignButton();
+        setClickingOnHowToUse();
+        setClickingOnHistoryButton();
+
+
+
+        saveExcelSheetInAppDirectory();
+
     }
 
+    private void setClickingOnWellDesignButton() {
 
-    private void setClickingOnProfileButton() {
-
-        mProfileButton.setOnClickListener(new View.OnClickListener() {
+        mWellDesignButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(mContext, "متضغطنيش تاني انا مش شغال", Toast.LENGTH_SHORT).show();
-
+                Intent intent = new Intent(mContext, IprActivity.class);
+                intent.putExtra("from_well_design", true);
+                startActivity(intent);
 
             }
         });
 
+    }
+
+    private void setClickingOnHowToUse() {
+
+        mHowToUseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+    }
+
+    private void setClickingOnHistoryButton() {
+
+        mHistoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+    }
+
+    private void setClickingOnIprButton() {
+
+        mIprButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(mContext, IprActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+    }
+
+
+
+
+    private void testMethod() {
+
+//        double qlMax = Ipr.getQMax(282, 1765, 2085);
+//        Log.i(LOG_TAG, "unix  qlMax :  " + qlMax);
+//
+//
+//        double qlTable = Ipr.getQTableSaturated(282, 1765,2085, 700);
+//
+//        Log.i(LOG_TAG, "unix  qlTable :  " + qlTable);
+//
+//        double qlTableUnderSaturatedCaseOne = Ipr.getQTableUnderSaturatedCasePwfBiggerPb(200, 3000,4000, 2000, 2000);
+//        Log.i(LOG_TAG, "unix  UnderSaturatedCaseOne :  " + qlTableUnderSaturatedCaseOne);
+//
+//        double qlTableUnderSaturatedCaseTwo = Ipr.getQTableUnderSaturatedCasePwfSmallerPb(532, 1200,4000, 1500, 2000);
+//        Log.i(LOG_TAG, "unix  UnderSaturatedCaseTwo :  " + qlTableUnderSaturatedCaseTwo);
+
+
+
+
+//        double qlSat = Ipr.getQTableSaturated(202, 1765, 2085, 1765, 0.7, 0.7, -1, -1, -1);
+//        Log.i(LOG_TAG, "unix  qlSat0.7 :  " + qlSat);
+//
+//        double qlSat2 = Ipr.getQTableSaturated(202, 1765, 2085, 1765, 0.7, 1.3, -1, -1, -1);
+//        Log.i(LOG_TAG, "unix  qlSat1.3 :  " + qlSat2);
+
+
+//        double qlUnderSat = Ipr.getQTableUnderSaturatedCasePrSmallerPb(378, 1200, 4000, 1500, 2000, 0.7, 0.7, -1, -1, -1);
+//        Log.i(LOG_TAG, "unix  qlSat0.7 :  " + qlUnderSat);
+
+//        double qlSat2 = Ipr.getQTableSaturated(202, 1765, 2085, 1765, 0.7, 1.3, -1, -1, -1);
+//        Log.i(LOG_TAG, "unix  qlSat1.3 :  " + qlSat2);
+
+    }
+
+
+    private void saveExcelSheetInAppDirectory() {
+
+        try {
+
+            String path = mContext.getExternalFilesDir("/excel").toString();
+
+            File outFile = new File(path, "excel_equations.xls");
+
+            if (outFile.exists()) {
+//                Toast.makeText(mContext, "the file exist", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            InputStream inputStream = getAssets().open("excel_equations.xls");
+
+            OutputStream outputStream = new FileOutputStream(outFile);
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while((read = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, read);
+            }
+
+            inputStream.close();
+            outputStream.flush();
+            outputStream.close();
+
+        } catch(IOException e) {
+            Log.e("tag", "Failed to copy asset file: " + "excel_equations.xls", e);
+        }
+
+    }
+
+
+
+
+
+
+
+    public void write() {
+
+
+
+        try {
+
+            File file = mContext.getExternalFilesDir("/excel/excel_equations.xls");
+
+            InputStream inp = new FileInputStream(file);
+
+            Workbook workbook = WorkbookFactory.create(inp);
+            workbook.setForceFormulaRecalculation(true);
+
+            Sheet sheet = workbook.getSheetAt(0);
+            sheet.setForceFormulaRecalculation(true);
+
+            int num = sheet.getLastRowNum();
+            Row row = sheet.getRow(0);
+            row.getCell(0).setCellValue(5);
+
+
+            FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
+            // suppose your formula is in B3
+            CellReference cellReference = new CellReference(0, 1);
+            Row row2 = sheet.getRow(cellReference.getRow());
+            Cell cell = row2.getCell(cellReference.getCol());
+            CellValue cellValue = evaluator.evaluate(cell);
+
+            Log.i(LOG_TAG, "unix cellValue equals : " + cellValue);
+
+
+
+            // Now this Write the output to a file
+            FileOutputStream fileOut = new FileOutputStream(file);
+            workbook.write(fileOut);
+            fileOut.close();
+
+
+
+        } catch (Exception e) {
+
+            Log.i(LOG_TAG, "unix : Exception in write method " + e);
+
+        }
+
+
+    }
+
+    public void readXLSX() {
+
+        File file = mContext.getExternalFilesDir("/excel/excel_equations.xls");
+
+        try {
+
+            FileInputStream fileInputStream = new FileInputStream(file);
+
+            HSSFWorkbook workBook = new HSSFWorkbook(fileInputStream);
+            workBook.setForceFormulaRecalculation(true);
+
+            HSSFSheet sheet = workBook.getSheetAt(2);
+            sheet.setForceFormulaRecalculation(true);
+
+            Iterator<Row> rowIterator = sheet.iterator();
+
+
+            Row row = sheet.getRow(49);
+            Cell cell = row.getCell(4);
+
+            FormulaEvaluator evaluator = workBook.getCreationHelper().createFormulaEvaluator();
+            CellValue cellValue = evaluator.evaluate(cell);
+
+            Log.i(LOG_TAG, "unix cell contains : " + cellValue.getNumberValue());
+
+
+            fileInputStream.close();
+
+        } catch (Exception e) {
+
+            Log.i(LOG_TAG, "unix : Exception readXLSX method " + e);
+
+        }
     }
 
 
@@ -127,7 +351,6 @@ public class MainActivity extends AppCompatActivity {
         editor.putString(getString(R.string.user_id_Key), getString(R.string.preference_string_empty_value));
         editor.putString(getString(R.string.name_Key), getString(R.string.preference_string_empty_value));
         editor.putString(getString(R.string.email_address_Key), getString(R.string.preference_string_empty_value));
-        editor.putBoolean("first_login_in", true);
         editor.apply();
 
         Toast.makeText(mContext, "Successfully Logout", Toast.LENGTH_SHORT).show();
