@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.suez.uni.petroleum.engineering.production.R;
+import com.suez.uni.petroleum.engineering.production.activities.views.ZoomView;
 
 import java.util.ArrayList;
 
@@ -16,7 +18,7 @@ public class GraphWellDesignActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = GraphActivity.class.getSimpleName();
 
-    private GraphView mGraphView;
+//    private GraphView mGraphView;
 
     private LineGraphSeries<DataPoint> mLineGraphSeries = new LineGraphSeries<>();
 
@@ -39,37 +41,50 @@ public class GraphWellDesignActivity extends AppCompatActivity {
         setContentView(R.layout.activity_graph_well_design);
 
 
-        mGraphView = findViewById(R.id.activity_graph_well_design_graph_view);
-        mGraphView.setScaleX(0.9f);
-        mGraphView.setScaleY(0.9f);
-        mGraphView.getGridLabelRenderer().setVerticalAxisTitle(getString(R.string.x_axis_title));
-        mGraphView.getGridLabelRenderer().setVerticalAxisTitleColor(R.color.primary_color);
-        mGraphView.getGridLabelRenderer().setHorizontalAxisTitle(getString(R.string.y_axis_title));
-        mGraphView.getGridLabelRenderer().setHorizontalAxisTitleColor(R.color.primary_color);
-        mGraphView.getGridLabelRenderer().setHorizontalLabelsAngle(135);
+//        mGraphView = findViewById(R.id.activity_graph_well_design_graph_view);
+//        mGraphView.setScaleX(0.9f);
+//        mGraphView.setScaleY(0.9f);
+//        mGraphView.getGridLabelRenderer().setVerticalAxisTitle(getString(R.string.x_axis_title));
+//        mGraphView.getGridLabelRenderer().setVerticalAxisTitleColor(R.color.primary_color);
+//        mGraphView.getGridLabelRenderer().setHorizontalAxisTitle(getString(R.string.y_axis_title));
+//        mGraphView.getGridLabelRenderer().setHorizontalAxisTitleColor(R.color.primary_color);
+//        mGraphView.getGridLabelRenderer().setHorizontalLabelsAngle(135);
 
 
         mHasFe = getIntent().getBooleanExtra("has_fe", false);
 
         mAllPressures = (ArrayList<Double>) getIntent().getSerializableExtra("all_pressures");
 
-        createIprLine();
+        LinearLayout linearLayout = findViewById(R.id.activity_graph_well_main_layout);
+
+        GraphView graphView = new GraphView(this);
+        ZoomView zoomView = new ZoomView(this);
+        zoomView.addView(graphView);
 
 
+
+        graphView.setScaleX(0.9f);
+        graphView.setScaleY(0.9f);
+        graphView.getGridLabelRenderer().setVerticalAxisTitle(getString(R.string.x_axis_title));
+        graphView.getGridLabelRenderer().setVerticalAxisTitleColor(R.color.primary_color);
+        graphView.getGridLabelRenderer().setHorizontalAxisTitle(getString(R.string.y_axis_title));
+        graphView.getGridLabelRenderer().setHorizontalAxisTitleColor(R.color.primary_color);
+        graphView.getGridLabelRenderer().setHorizontalLabelsAngle(135);
+        graphView.getGridLabelRenderer().setNumHorizontalLabels(10);
 
 
         AllFlowRatesTableTwo = (ArrayList<Double>) getIntent().getSerializableExtra("all_flow_rate_two");
         mDNumbers = getIntent().getIntExtra("d_numbers", 1);
 
+        createIprLine(graphView);
+        createWellDesignLine(graphView);
 
-        createWellDesignLine();
 
-
-
+        linearLayout.addView(zoomView);
 
     }
 
-    private void createWellDesignLine() {
+    private void createWellDesignLine(GraphView graphView) {
 
         Log.i(LOG_TAG, "unix the point :");
         mDNumbers = getIntent().getIntExtra("d_numbers", 1);
@@ -97,27 +112,41 @@ public class GraphWellDesignActivity extends AppCompatActivity {
 
                 }
 
-                if (i == 1) {
-                    lineGraphSeries.setColor(R.color.purple_200);
+                if (i == 0) {
+                    lineGraphSeries.setColor(R.color.red);
                 }
 
 
                 if (i == 1) {
-                    lineGraphSeries.setColor(R.color.table_black);
+                    lineGraphSeries.setColor(R.color.red);
+                }
+
+                if (i == 2) {
+                    lineGraphSeries.setColor(R.color.red);
                 }
 
 
-                mGraphView.getGridLabelRenderer().setNumHorizontalLabels(15);
+                graphView.getGridLabelRenderer().setNumHorizontalLabels(15);
 
-                mGraphView.addSeries(lineGraphSeries);
-                mGraphView.getLegendRenderer().setVisible(true);
+                graphView.addSeries(lineGraphSeries);
+                graphView.getLegendRenderer().setVisible(true);
 
             }
 
 
     }
 
-    private void createIprLine() {
+    private void createIprLine(GraphView graphView) {
+
+        graphView.setScaleX(0.9f);
+        graphView.setScaleY(0.9f);
+        graphView.getGridLabelRenderer().setVerticalAxisTitle(getString(R.string.x_axis_title));
+        graphView.getGridLabelRenderer().setVerticalAxisTitleColor(R.color.primary_color);
+        graphView.getGridLabelRenderer().setHorizontalAxisTitle(getString(R.string.y_axis_title));
+        graphView.getGridLabelRenderer().setHorizontalAxisTitleColor(R.color.primary_color);
+        graphView.getGridLabelRenderer().setHorizontalLabelsAngle(135);
+        graphView.getGridLabelRenderer().setNumHorizontalLabels(10);
+
 
         if (!mHasFe) {
 
@@ -133,8 +162,10 @@ public class GraphWellDesignActivity extends AppCompatActivity {
 
             }
 
-            mGraphView.getGridLabelRenderer().setNumHorizontalLabels(15);
-            mGraphView.addSeries(mLineGraphSeries);
+            graphView.getGridLabelRenderer().setNumHorizontalLabels(15);
+            mLineGraphSeries.setTitle("Inflow curve");
+            mLineGraphSeries.setColor(R.color.black);
+            graphView.addSeries(mLineGraphSeries);
 
         } else {
 
@@ -161,14 +192,14 @@ public class GraphWellDesignActivity extends AppCompatActivity {
                 }
 
                 if (i == 1) {
-                    lineGraphSeries.setColor(R.color.purple_200);
+                    lineGraphSeries.setColor(R.color.black);
                 }
 
 
-                mGraphView.getGridLabelRenderer().setNumHorizontalLabels(15);
+                graphView.getGridLabelRenderer().setNumHorizontalLabels(15);
 
-                mGraphView.addSeries(lineGraphSeries);
-                mGraphView.getLegendRenderer().setVisible(true);
+                graphView.addSeries(lineGraphSeries);
+                graphView.getLegendRenderer().setVisible(true);
             }
 
         }

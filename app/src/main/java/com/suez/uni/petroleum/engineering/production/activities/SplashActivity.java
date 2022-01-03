@@ -48,6 +48,8 @@ public class SplashActivity extends AppCompatActivity {
         TextView doctorLayout = findViewById(R.id.activity_splash_screen_doctor_text_view);
         LinearLayout studentLayout = findViewById(R.id.activity_splash_screen_student_layout);
 
+        LinearLayout students = findViewById(R.id.student_ids);
+
 
 
 
@@ -56,7 +58,7 @@ public class SplashActivity extends AppCompatActivity {
 
         doctorLayout.setAnimation(animationFromLeftToRight);
 
-        int SPLASH_SCREEN = 1500;
+        int SPLASH_SCREEN = 2500;
 
 
 
@@ -64,8 +66,8 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                studentLayout.setVisibility(View.VISIBLE);
-                studentLayout.setAnimation(animationFromRightToLeft);
+                students.setVisibility(View.VISIBLE);
+                students.setAnimation(animationFromRightToLeft);
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -77,7 +79,7 @@ public class SplashActivity extends AppCompatActivity {
                 }, SPLASH_SCREEN);
 
             }
-        }, SPLASH_SCREEN);
+        }, 2000);
 
     }
 

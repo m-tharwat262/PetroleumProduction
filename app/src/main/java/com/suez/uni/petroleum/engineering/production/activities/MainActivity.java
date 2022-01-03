@@ -133,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Intent intent = new Intent(mContext, HowToUseActivity.class);
+                startActivity(intent);
+
             }
         });
 
@@ -143,6 +146,9 @@ public class MainActivity extends AppCompatActivity {
         mHistoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent intent = new Intent(mContext, HistoryActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -164,41 +170,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-    private void testMethod() {
-
-//        double qlMax = Ipr.getQMax(282, 1765, 2085);
-//        Log.i(LOG_TAG, "unix  qlMax :  " + qlMax);
-//
-//
-//        double qlTable = Ipr.getQTableSaturated(282, 1765,2085, 700);
-//
-//        Log.i(LOG_TAG, "unix  qlTable :  " + qlTable);
-//
-//        double qlTableUnderSaturatedCaseOne = Ipr.getQTableUnderSaturatedCasePwfBiggerPb(200, 3000,4000, 2000, 2000);
-//        Log.i(LOG_TAG, "unix  UnderSaturatedCaseOne :  " + qlTableUnderSaturatedCaseOne);
-//
-//        double qlTableUnderSaturatedCaseTwo = Ipr.getQTableUnderSaturatedCasePwfSmallerPb(532, 1200,4000, 1500, 2000);
-//        Log.i(LOG_TAG, "unix  UnderSaturatedCaseTwo :  " + qlTableUnderSaturatedCaseTwo);
-
-
-
-
-//        double qlSat = Ipr.getQTableSaturated(202, 1765, 2085, 1765, 0.7, 0.7, -1, -1, -1);
-//        Log.i(LOG_TAG, "unix  qlSat0.7 :  " + qlSat);
-//
-//        double qlSat2 = Ipr.getQTableSaturated(202, 1765, 2085, 1765, 0.7, 1.3, -1, -1, -1);
-//        Log.i(LOG_TAG, "unix  qlSat1.3 :  " + qlSat2);
-
-
-//        double qlUnderSat = Ipr.getQTableUnderSaturatedCasePrSmallerPb(378, 1200, 4000, 1500, 2000, 0.7, 0.7, -1, -1, -1);
-//        Log.i(LOG_TAG, "unix  qlSat0.7 :  " + qlUnderSat);
-
-//        double qlSat2 = Ipr.getQTableSaturated(202, 1765, 2085, 1765, 0.7, 1.3, -1, -1, -1);
-//        Log.i(LOG_TAG, "unix  qlSat1.3 :  " + qlSat2);
-
-    }
 
 
     private void saveExcelSheetInAppDirectory() {

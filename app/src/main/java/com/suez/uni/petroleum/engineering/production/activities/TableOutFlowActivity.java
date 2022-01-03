@@ -186,7 +186,7 @@ public class TableOutFlowActivity extends AppCompatActivity {
             if (mAllDiameters.size() > 2) {
                 df = new DecimalFormat("#.##");
             } else {
-                df = new DecimalFormat("#.####");
+                df = new DecimalFormat("#.##");
             }
 
             df.setRoundingMode(RoundingMode.CEILING);

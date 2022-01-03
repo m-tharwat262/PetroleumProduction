@@ -239,7 +239,7 @@ public class TableActivity extends AppCompatActivity {
 //                mAllFlowRates.add(flowRate);
 
 
-                DecimalFormat df = new DecimalFormat("#.###");
+                DecimalFormat df = new DecimalFormat("#.##");
                 df.setRoundingMode(RoundingMode.CEILING);
 
 

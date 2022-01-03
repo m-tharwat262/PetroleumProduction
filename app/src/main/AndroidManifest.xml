@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SPELogin">
-        <activity android:name=".activities.GraphWellDesignActivity"></activity>
+        <activity android:name=".activities.HowToUseActivity"></activity>
+        <activity android:name=".activities.HistoryActivity" />
+        <activity android:name=".activities.GraphWellDesignActivity" />
         <activity android:name=".activities.TableOutFlowActivity" />
         <activity android:name=".activities.OutFlowDataActivity" />
         <activity android:name=".activities.TableActivity" />
