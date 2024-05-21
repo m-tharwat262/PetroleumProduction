@@ -46,25 +46,7 @@ Using **IPR data** above and the outflow data in the table below to get the trav
 | diameter (d4)                      | ..... | in   |
 | diameter (d5)                      | ..... | in   |
 
-Depth (d) = 7000 ft
-
-Well Head Pressure = 200 Psig
-
-Gas Liquid Ration (GLR) = 500 scf/STB
-
-American Petroleum Institute (API) = 35
-
-Gas Specific Gravity (SG) = 0.65
-
-Water Fraction (Fw) = 50
-
-Tubing Size Values :
-
-d1 = 1.995 in
-
-d2 = 2.441 in
-
-d3 = 2.992 in
+## ScreenShots
 
 The Results will gives you graph contains both IPR and Travers Cureves Tubing Size Diameteres used like that :
 
@@ -74,6 +56,6 @@ The Results will gives you graph contains both IPR and Travers Cureves Tubing Si
 
 
 
-Download App [here](https://pages.github.com/)
+Download App [here](apk/Petroleum_Production.apk)
 
 
