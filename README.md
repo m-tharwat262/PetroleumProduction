@@ -56,9 +56,12 @@ Using **IPR data** above and the outflow data in the table below to get the trav
 
 
 ## ScreenShots
-<img src="screenshots/ipr_input_data.png" alt="IPR Inpput Data" width="200"/>
-<img src="screenshots/ipr_table.png" alt="IPR Inpput Data" width="200"/>
-<img src="screenshots/ipr_curve.png" alt="IPR Inpput Data" width="200"/>
+<div style="display: flex; justify-content: center;">
+  <img src="screenshots/ipr_input_data.png" alt="IPR Inpput Data" width="200" style="margin-right: 10px;" />
+  <img src="screenshots/ipr_table.png" alt="IPR Inpput Data" width="200" style="margin-right: 10px;" />
+  <img src="screenshots/ipr_curve.png" alt="IPR Inpput Data" width="200" style="margin-right: 10px;" />
+</div>
+
 
 
 
