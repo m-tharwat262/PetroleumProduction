@@ -1,7 +1,7 @@
 # <img src="screenshots/app_icon.png" alt="app icon" width="35"/> Petroleum Oil and Gas Production App
 Calculate IPR and Travers curves that show the productive capacity and well performance and determine the pressure distribution and rates along oil and gas wells.
-<video width="150" height="150" controls>
-  <source src="screenRecord/calculate_ipr_and_draw_curve.mp4" type="video/mp4">
+<video width="150" controls>
+  <source src="https://github.com/m-tharwat262/PetroleumProduction/blob/master/screenRecord/calculate_ipr_and_draw_curve.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
