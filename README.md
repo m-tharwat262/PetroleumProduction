@@ -14,9 +14,9 @@ The app provides three methods to calculate the IPR curve
 ## Travers Curve
 You can get the Travers Curve Using the IPR data and outflow data
 with different tubing size
-- **1.995 in**
-- **2.441 in**
-- **2.992 in**
+- **1.995 inch**
+- **2.441 inch**
+- **2.992 inch**
 
 
 
@@ -46,11 +46,11 @@ Using **IPR data** above and the outflow data in the table below to get the trav
 | American Petroleum Institute (API) | 35    | none |
 | Gas Specific Gravity (SG)          | 0.65  | none |
 | Water Fraction (Fw)                | 50    | none |
-| diameter (d1)                      | 1.995 | in   |
-| diameter (d2)                      | 1.995 | in   |
-| diameter (d3)                      | 1.995 | in   |
-| diameter (d4)                      | ..... | in   |
-| diameter (d5)                      | ..... | in   |
+| diameter (d1)                      | 1.995 | inch |
+| diameter (d2)                      | 2.441 | inch |
+| diameter (d3)                      | 2.992 | inch |
+| diameter (d4)                      | ..... | inch |
+| diameter (d5)                      | ..... | inch |
 
 
 
