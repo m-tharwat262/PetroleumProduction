@@ -59,17 +59,17 @@ Using **IPR data** above and the outflow data in the table below to get the trav
 
 ### IPR Curve
 <div style="display: flex; justify-content: center;">
-  <img src="screenshots/ipr_input_data.png" alt="IPR Input Data" width="200" style="margin-right: 20px;" />
-  <img src="screenshots/ipr_table.png" alt="IPR Table" width="200" style="margin-right: 20px;" />
-  <img src="screenshots/ipr_curve.png" alt="IPR Curve" width="200" style="margin-right: 20px;" />
+  <img src="screenshots/ipr_input_data.png" alt="IPR Input Data" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/ipr_table.png" alt="IPR Table" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/ipr_curve.png" alt="IPR Curve" width="150" style="margin-right: 20px;" />
 </div>
 
 ### Travers Curve
 <div style="display: flex; justify-content: center;">
-  <img src="screenshots/out_flow_input_data1.png" alt="IPR Input Data" width="200" style="margin-right: 20px;" />
-  <img src="screenshots/out_flow_input_data2.png" alt="IPR Input Data" width="200" style="margin-right: 20px;" />
-  <img src="screenshots/out_flow_table.png" alt="IPR Table" width="200" style="margin-right: 20px;" />
-  <img src="screenshots/travers_curve.png" alt="IPR Curve" width="200" style="margin-right: 20px;" />
+  <img src="screenshots/out_flow_input_data1.png" alt="IPR Input Data" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/out_flow_input_data2.png" alt="IPR Input Data" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/out_flow_table.png" alt="IPR Table" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/travers_curve.png" alt="IPR Curve" width="150" style="margin-right: 20px;" />
 </div>
 
 
