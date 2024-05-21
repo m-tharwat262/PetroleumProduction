@@ -23,14 +23,23 @@ you can use the IPR data above and add the next data to the Out Flow Input Data
 
 
 Depth (d) = 7000 ft
+
 Well Head Pressure = 200 Psig
+
 Gas Liquid Ration (GLR) = 500 scf/STB
+
 American Petroleum Institute (API) = 35
+
 Gas Specific Gravity (SG) = 0.65
+
 Water Fraction (Fw) = 50
+
 Tubing Size Values :
+
 d1 = 1.995 in
+
 d2 = 2.441 in
+
 d3 = 2.992 in
 
 The Results will gives you graph contains both IPR and Travers Cureves Tubing Size Diameteres used like that :
