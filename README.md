@@ -44,7 +44,7 @@ d3 = 2.992 in
 
 The Results will gives you graph contains both IPR and Travers Cureves Tubing Size Diameteres used like that :
 
-![IPR curve](https://github.com/m-tharwat262/PetroleumProduction/blob/master/screenshots/ipr_curve.png)![IPR curve](https://github.com/m-tharwat262/PetroleumProduction/blob/master/screenshots/ipr_curve.png)
+![IPR curve](/screenshots/ipr_curve.png)![IPR curve](https://github.com/m-tharwat262/PetroleumProduction/blob/master/screenshots/ipr_curve.png)
 
 
 
