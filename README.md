@@ -14,7 +14,6 @@ with different tubing size
 - **2.441 in**
 - **2.992 in**
 
-- 
 ## Test the app
 you can use the values provided in the tables below to test the app.
 
