@@ -1,6 +1,6 @@
 # <img src="screenshots/app_icon.png" alt="app icon" width="35"/> Petroleum Oil and Gas Production App
 Calculate IPR and Travers curves that show the productive capacity and well performance and determine the pressure distribution and rates along oil and gas wells.
-
+<img src="screenRecords/calculate_ipr_and_draw_curve.mp4" alt="Calculate IPR" width="150" style="margin-right: 20px;" />
 
 
 ## IPR Curve
@@ -66,10 +66,10 @@ Using **IPR data** above and the outflow data in the table below to get the trav
 
 ### Travers Curve
 <div style="display: flex; justify-content: center;">
-  <img src="screenshots/out_flow_input_data1.png" alt="IPR Input Data" width="150" style="margin-right: 20px;" />
-  <img src="screenshots/out_flow_input_data2.png" alt="IPR Input Data" width="150" style="margin-right: 20px;" />
-  <img src="screenshots/out_flow_table.png" alt="IPR Table" width="150" style="margin-right: 20px;" />
-  <img src="screenshots/travers_curve.png" alt="IPR Curve" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/out_flow_input_data1.png" alt="Out Flow Input Data" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/out_flow_input_data2.png" alt="Out Flow Input Data2" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/out_flow_table.png" alt="Out Flow Table" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/travers_curve.png" alt="Travers Curve" width="150" style="margin-right: 20px;" />
 </div>
 
 
