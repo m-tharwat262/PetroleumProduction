@@ -22,27 +22,15 @@ you can use the values provided in the tables below to test the app.
 Using **Vogel and Standing** method with no skin Effect.
 
 | Header 1 | Value    | Unit |
-|----------|----------|----------|
-| Average Reservoir Pressure (Pres)    | 3200     | Psig|
-| Bubble Point Pressure (Pb)    | 2200     | Psig|
-| Pressure (Pwf)    | 1340     | Psig|
-| Flow Rate (QI)    | 1000     | STB/Day|
+|-----------------------------------|------|--------|
+| Average Reservoir Pressure (Pres) | 3200 | Psig   |
+| Bubble Point Pressure (Pb)        | 2200 | Psig   |
+| Pressure (Pwf)                    | 1340 | Psig   |
+| Flow Rate (QI)                    | 1000 | STB/Day|
 
+### Travers Curve Test
 
-using (Vogel and Standing) method :
-
-Average Reservoir Pressure (Pres) = 3200 Psig
-
-Bubble Point Pressure (Pb) = 2200 Psig
-
-Pressure (Pwf) = 1340 Psig
-
-Flow Rate (QI) = 1000 STB/Day
-
-
-To calculate the Travers Curves :
-
-you can use the IPR data above and add the next data to the Out Flow Input Data
+Using **IPR data** above and the outflow data in the table below to get the travers cure.
 
 
 Depth (d) = 7000 ft
