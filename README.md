@@ -21,7 +21,7 @@ you can use the values provided in the tables below to test the app.
 
 Using **Vogel and Standing** method with no skin Effect.
 
-| Header 1 | Value    | Unit |
+| Header 1                          | Value| Unit   |
 |-----------------------------------|------|--------|
 | Average Reservoir Pressure (Pres) | 3200 | Psig   |
 | Bubble Point Pressure (Pb)        | 2200 | Psig   |
@@ -32,6 +32,19 @@ Using **Vogel and Standing** method with no skin Effect.
 
 Using **IPR data** above and the outflow data in the table below to get the travers cure.
 
+| Header 1                           | Value | Unit |
+|------------------------------------|-------|------|
+| Depth (d)                          | 7000  | Ft   |
+| Well Head Pressure (Pwh)           | 200   | Psig |
+| Gas Liquid Ration (GLR)            | 500   | Psig |
+| American Petroleum Institute (API) | 35    | none |
+| Gas Specific Gravity (SG)          | 0.65  | none |
+| Water Fraction (Fw)                | 50    | none |
+| diameter (d1)                      | 1.995 | in   |
+| diameter (d2)                      | 1.995 | in   |
+| diameter (d3)                      | 1.995 | in   |
+| diameter (d4)                      | ..... | in   |
+| diameter (d5)                      | ..... | in   |
 
 Depth (d) = 7000 ft
 
