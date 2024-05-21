@@ -2,9 +2,18 @@
 Calculate IPR and Travers curves that show the productive capacity and well performance and determine the pressure distribution and rates along oil and gas wells.
 
 ## Test the app:
-you can use these values to test the app from a real well-data
+you can use these values to test the app
 
-For calculate (IPR) :
+### IPR Test :
+
+
+| Header 1 | Value    | Unit |
+|----------|----------|----------|
+| Average Reservoir Pressure (Pres)    | 3200     | Psig|
+| Bubble Point Pressure (Pb)    | 2200     | Psig|
+| Pressure (Pwf)    | 1340     | Psig|
+| Flow Rate (QI)    | 1000     | STB/Day|
+
 
 using (Vogel and Standing) method :
 
