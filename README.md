@@ -3,9 +3,9 @@ Calculate IPR and Travers curves that show the productive capacity and well perf
 
 ## Calculate IPR
 The app provides three methods to calculate the IPR 
-- Vogel and Standing
-- Fetkovich
-- Jones et al
+- **Vogel and Standing**
+- **Fetkovich**
+- **Jones et al**
 
 
 ## Test the app:
