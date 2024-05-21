@@ -1,5 +1,5 @@
-# Petroleum Oil and Gas Production App
-<img src="screenshots/app_icon.png" alt="app icon" width="200"/>
+# Petroleum Oil and Gas Production App <img src="screenshots/app_icon.png" alt="app icon" width="100"/>
+
 
 Calculate IPR and Travers curves that show the productive capacity and well performance and determine the pressure distribution and rates along oil and gas wells.
 
