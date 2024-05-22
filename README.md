@@ -12,8 +12,7 @@ The app provides three methods to calculate the IPR curve:
 
 
 ## Travers Curve
-You can get the Travers Curve Using the IPR data and outflow data:
-with different tubing size
+You can get the Travers Curve Using the IPR data and outflow data with different tubing size:
 - **1.995 inch**
 - **2.441 inch**
 - **2.992 inch**
