@@ -4,7 +4,7 @@ Calculate IPR and Travers curves that show the productive capacity and well perf
 
 
 ## IPR Curve
-The app provides three methods to calculate the IPR curve
+The app provides three methods to calculate the IPR curve:
 - **Vogel and Standing**
 - **Fetkovich**
 - **Jones et al**
@@ -12,7 +12,7 @@ The app provides three methods to calculate the IPR curve
 
 
 ## Travers Curve
-You can get the Travers Curve Using the IPR data and outflow data
+You can get the Travers Curve Using the IPR data and outflow data:
 with different tubing size
 - **1.995 inch**
 - **2.441 inch**
@@ -77,5 +77,5 @@ Using **IPR data** above and the outflow data in the table below to get the trav
 
 
 ## Download
-You can download the app from [here](https://raw.githubusercontent.com/m-tharwat262/PetroleumProduction/master/apk/Petroleum_Production.apk)
+You can download the app from [here.](https://raw.githubusercontent.com/m-tharwat262/PetroleumProduction/master/apk/Petroleum_Production.apk)
 
