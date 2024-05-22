@@ -79,4 +79,5 @@ Using **IPR data** above and the outflow data in the table below to get the trav
 ## Download
 You can download the app from [here](apk/Petroleum_Production.apk)
 
+[![Download APK]([https://img.shields.io/badge/download-APK-blue](https://github.com/m-tharwat262/PetroleumProduction/blob/master/apk/Petroleum_Production.apk))](apk/Petroleum_Production.apk)
 
