@@ -2,6 +2,23 @@
 Calculate IPR and Travers curves that show the productive capacity and well performance and determine the pressure distribution and rates along oil and gas wells.
 
 
+## ScreenShots
+
+### IPR Curve
+<div style="display: flex; justify-content: center;">
+  <img src="screenshots/ipr_input_data.png" alt="IPR Input Data" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/ipr_table.png" alt="IPR Table" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/ipr_curve.png" alt="IPR Curve" width="150" style="margin-right: 20px;" />
+</div>
+
+### Travers Curve
+<div style="display: flex; justify-content: center;">
+  <img src="screenshots/out_flow_input_data1.png" alt="Out Flow Input Data" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/out_flow_input_data2.png" alt="Out Flow Input Data2" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/out_flow_table.png" alt="Out Flow Table" width="150" style="margin-right: 20px;" />
+  <img src="screenshots/travers_curve.png" alt="Travers Curve" width="150" style="margin-right: 20px;" />
+</div>
+
 
 ## IPR Curve
 The app provides three methods to calculate the IPR curve:
@@ -50,29 +67,6 @@ Using **IPR data** above and the outflow data in the table below to get the trav
 | diameter (d3)                      | 2.992 | inch |
 | diameter (d4)                      | ..... | inch |
 | diameter (d5)                      | ..... | inch |
-
-
-
-
-## ScreenShots
-
-### IPR Curve
-<div style="display: flex; justify-content: center;">
-  <img src="screenshots/ipr_input_data.png" alt="IPR Input Data" width="150" style="margin-right: 20px;" />
-  <img src="screenshots/ipr_table.png" alt="IPR Table" width="150" style="margin-right: 20px;" />
-  <img src="screenshots/ipr_curve.png" alt="IPR Curve" width="150" style="margin-right: 20px;" />
-</div>
-
-### Travers Curve
-<div style="display: flex; justify-content: center;">
-  <img src="screenshots/out_flow_input_data1.png" alt="Out Flow Input Data" width="150" style="margin-right: 20px;" />
-  <img src="screenshots/out_flow_input_data2.png" alt="Out Flow Input Data2" width="150" style="margin-right: 20px;" />
-  <img src="screenshots/out_flow_table.png" alt="Out Flow Table" width="150" style="margin-right: 20px;" />
-  <img src="screenshots/travers_curve.png" alt="Travers Curve" width="150" style="margin-right: 20px;" />
-</div>
-
-
-
 
 
 ## Download
